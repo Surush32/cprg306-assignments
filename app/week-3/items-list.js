@@ -1,5 +1,5 @@
 import React from 'react';
-import Item from './Item';
+import Item from './items';
 
 const items = [
   {
@@ -34,44 +34,24 @@ const items = [
   },
   {
     name: "pasta sauce 🍝",
-    quantity: 3,
-    category: "canned goods",
-  },
-  {
-    name: "spaghetti, 454 g 🍝",
     quantity: 2,
-    category: "dry goods",
-  },
-  {
-    name: "toilet paper, 12 pack 🧻",
-    quantity: 1,
-    category: "household",
-  },
-  {
-    name: "paper towels, 6 pack",
-    quantity: 1,
-    category: "household",
-  },
-  {
-    name: "dish soap 🍽️",
-    quantity: 1,
-    category: "household",
-  },
-  {
-    name: "hand soap 🧼",
-    quantity: 4,
-    category: "household",
+    category: "pantry",
   },
 ];
 
-const ItemList = () => {
+const ItemsList = () => {
   return (
-    <ul className="list-disc pl-5">
-      {items.map((item, index) => (
-        <Item key={index} {...item} />
-      ))}
-    </ul>
+    <div className="container mx-auto p-4">
+      <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">Shopping List</h1>
+      <ul className="space-y-4">
+        {items.map((item, index) => (
+          <li key={index}>
+            <Item name={item.name} quantity={item.quantity} category={item.category} />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 
-export default ItemList;
+export default ItemsList;
