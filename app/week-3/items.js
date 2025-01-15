@@ -8,9 +8,9 @@ const Item = ({ name, quantity, category }) => {
         <p className="text-sm text-neon-blue">Quantity: {quantity}</p>
         <p className="text-sm text-neon-blue">Category: {category}</p>
       </div>
-      <div className="text-right">
+      <div className="text-right space-x-2">
         <button className="bg-neon-pink text-white px-3 py-1 rounded-md hover:bg-neon-pink-dark">Edit</button>
-        <button className="bg-neon-orange text-white px-3 py-1 rounded-md ml-2 hover:bg-neon-orange-dark">Delete</button>
+        <button className="bg-neon-orange text-white px-3 py-1 rounded-md hover:bg-neon-orange-dark">Delete</button>
       </div>
     </div>
   );
