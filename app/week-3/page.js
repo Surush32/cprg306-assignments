@@ -1,6 +1,10 @@
 import React from 'react';
 import ItemList from './items-list';
 
+/**
+ * Page component renders the main shopping list page.
+ * Displays a title and the ItemsList component.
+ */
 const Page = () => {
   return (
     <main className="p-6 bg-gray-100">

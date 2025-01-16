@@ -1,6 +1,9 @@
-
 import StudentInfo from './student-info';
 
+/**
+ * Page component renders the main shopping list page.
+ * Displays a title and the StudentInfo component.
+ */
 export default function Page() {
   return (
     <main>
@@ -8,4 +11,4 @@ export default function Page() {
       <StudentInfo />
     </main>
   );
-} 
+}

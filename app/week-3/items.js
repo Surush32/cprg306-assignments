@@ -1,5 +1,10 @@
 import React from 'react';
 
+/**
+ * Item component renders a single shopping item.
+ * Displays the name, quantity, and category of the item.
+ * Includes Edit and Delete buttons.
+ */
 const Item = ({ name, quantity, category }) => {
   return (
     <div className="p-4 bg-gray-900 rounded-lg shadow-md flex items-center justify-between">
