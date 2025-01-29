@@ -1,6 +1,4 @@
 
-
-
 const Item = ({ name, quantity, category }) => {
   return (
     <div className="p-4 bg-gray-900 rounded-lg shadow-md flex items-center justify-between">

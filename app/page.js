@@ -1,9 +1,4 @@
 import Link from 'next/link';
-
-/**
- * Home component renders the main page.
- * Displays the course title and links to Week 2 and Week 3 pages.
- */
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
