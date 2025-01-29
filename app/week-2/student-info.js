@@ -1,8 +1,5 @@
 import Link from 'next/link';
 
-/**
- * StudentInfo component displays the student's name and a link to their GitHub repository.
- */
 export default function StudentInfo() {
   return (
     <div>

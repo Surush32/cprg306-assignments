@@ -72,10 +72,6 @@ const item12 = {
   category: "household",
 };
 
-/**
- * ItemsList component renders a list of shopping items.
- * Each item is displayed using the Item component.
- */
 
 const ItemsList = () => {
   return (
