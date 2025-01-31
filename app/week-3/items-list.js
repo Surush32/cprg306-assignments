@@ -1,5 +1,3 @@
-import Item from './items';
-
 const item1 = {
   name: "milk, 4 L 🥛",
   quantity: 1,
@@ -72,14 +70,14 @@ const item12 = {
   category: "household",
 };
 
-
 const ItemsList = () => {
   return (
-    <div className="container mx-auto p-4">
+    <div className="p-4 max-w-md text-left">
       <ul className="space-y-4">
         {[item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12].map((item, index) => (
-          <li key={index}>
-            <Item name={item.name} quantity={item.quantity} category={item.category} />
+          <li key={index} className="p-4 border rounded shadow-md bg-green-50 hover:bg-green-100 transition duration-200">
+            <div className="text-lg font-semibold text-green-800">{item.name}</div>
+            <div className="text-sm text-green-600">Buy {item.quantity} in {item.category}</div>
           </li>
         ))}
       </ul>
