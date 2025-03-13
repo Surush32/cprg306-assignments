@@ -1,14 +1,19 @@
 "use client"; 
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Item from './item';
-import items from './items.json'; 
+import itemsData from './item.json'; 
 
-const ItemList = () => {
+const ItemList = ({ items, onItemSelect }) => { 
   const [sortBy, setSortBy] = useState('name'); 
+  const [itemsState, setItems] = useState([]); 
+
+  useEffect(() => {
+    setItems([...itemsData, ...items]); 
+  }, [items]); 
 
   
-  const sortedItems = [...items].sort((a, b) => {
+  const sortedItems = [...itemsState].sort((a, b) => { 
     if (sortBy === 'name') {
       return a.name.localeCompare(b.name);
     } else {
@@ -17,7 +22,7 @@ const ItemList = () => {
   });
 
   return (
-    <div className="p-4 max-w-md text-left">
+    <div className="p-4 max-w-md text-left border rounded shadow-md bg-white">
       <div className="mb-4 flex space-x-2"> 
         <button 
           onClick={() => setSortBy('name')} 
@@ -38,7 +43,13 @@ const ItemList = () => {
       </div>
       <ul className="space-y-4">
         {sortedItems.map(item => (
-          <Item key={item.id} name={item.name} quantity={item.quantity} category={item.category} />
+          <Item 
+            key={item.id} 
+            name={item.name} 
+            quantity={item.quantity} 
+            category={item.category} 
+            onSelect={() => onItemSelect(item.name)} 
+          />
         ))}
       </ul>
     </div>

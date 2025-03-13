@@ -1,13 +1,13 @@
-"use client"; // Add this line to mark the component as a client component
+"use client"; 
 
 import React, { useState } from 'react';
 import Item from './item';
-// import items from './item.json'; // Remove this import
 
-const ItemList = ({ items }) => { // Add items prop
-  const [sortBy, setSortBy] = useState('name'); // Initialize sortBy state
 
-  // Sort items based on sortBy state
+const ItemList = ({ items }) => { 
+  const [sortBy, setSortBy] = useState('name'); 
+
+  
   const sortedItems = [...items].sort((a, b) => {
     if (sortBy === 'name') {
       return a.name.localeCompare(b.name);
@@ -18,7 +18,7 @@ const ItemList = ({ items }) => { // Add items prop
 
   return (
     <div className="p-4 max-w-md text-left">
-      <div className="mb-4 flex space-x-2"> {/* Use flex for better alignment */}
+      <div className="mb-4 flex space-x-2"> 
         <button 
           onClick={() => setSortBy('name')} 
           className={`px-4 py-2 rounded-lg transition duration-200 
